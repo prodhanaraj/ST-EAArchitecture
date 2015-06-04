@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83CB26051B202F1F00138203 /* BaseProxy.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83CB26041B202F1F00138203 /* BaseProxy.h */; };
+		83CB26071B202F1F00138203 /* BaseProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB26061B202F1F00138203 /* BaseProxy.m */; };
+		83CB260D1B202F1F00138203 /* libSyncTimesServiceLayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CB26011B202F1F00138203 /* libSyncTimesServiceLayer.a */; };
+		83CB261C1B202F4500138203 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CB261B1B202F4500138203 /* SystemConfiguration.framework */; };
+		83CB261E1B202F4D00138203 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CB261D1B202F4D00138203 /* MobileCoreServices.framework */; };
+		83CB26361B20322C00138203 /* libSyncTimesInternalModels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CB26351B20322C00138203 /* libSyncTimesInternalModels.a */; };
+		83CB263D1B2033A800138203 /* Services_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83CB263C1B2033A800138203 /* Services_Config.plist */; };
+		83CB26441B20346D00138203 /* Endpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB26431B20346D00138203 /* Endpoint.m */; };
+		83CB26471B2034D400138203 /* ServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB26461B2034D400138203 /* ServiceClient.m */; };
+		83CB264D1B2035CA00138203 /* InitServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB264C1B2035CA00138203 /* InitServiceClient.m */; };
+		83CB26851B203E6500138203 /* WCObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB26841B203E6500138203 /* WCObjectManager.m */; };
+		83CB26881B20401A00138203 /* EncounterDataProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB26871B20401A00138203 /* EncounterDataProxy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83CB260E1B202F1F00138203 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CB25F91B202F1F00138203 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CB26001B202F1F00138203;
+			remoteInfo = SyncTimesServiceLayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		83CB25FF1B202F1F00138203 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				83CB26051B202F1F00138203 /* BaseProxy.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		83CB26011B202F1F00138203 /* libSyncTimesServiceLayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSyncTimesServiceLayer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CB26041B202F1F00138203 /* BaseProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseProxy.h; sourceTree = "<group>"; };
+		83CB26061B202F1F00138203 /* BaseProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseProxy.m; sourceTree = "<group>"; };
+		83CB260C1B202F1F00138203 /* SyncTimesServiceLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyncTimesServiceLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CB26121B202F1F00138203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83CB261B1B202F4500138203 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		83CB261D1B202F4D00138203 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		83CB26351B20322C00138203 /* libSyncTimesInternalModels.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSyncTimesInternalModels.a; path = "../SyncTimesInternalModels/build/Debug-iphoneos/libSyncTimesInternalModels.a"; sourceTree = "<group>"; };
+		83CB263C1B2033A800138203 /* Services_Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services_Config.plist; sourceTree = "<group>"; };
+		83CB26421B20346D00138203 /* Endpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Endpoint.h; sourceTree = "<group>"; };
+		83CB26431B20346D00138203 /* Endpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Endpoint.m; sourceTree = "<group>"; };
+		83CB26451B2034D400138203 /* ServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceClient.h; path = SyncTimesServiceLayer/ServiceClient.h; sourceTree = "<group>"; };
+		83CB26461B2034D400138203 /* ServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceClient.m; path = SyncTimesServiceLayer/ServiceClient.m; sourceTree = "<group>"; };
+		83CB264B1B2035CA00138203 /* InitServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitServiceClient.h; path = SyncTimesServiceLayer/InitServiceClient.h; sourceTree = "<group>"; };
+		83CB264C1B2035CA00138203 /* InitServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitServiceClient.m; path = SyncTimesServiceLayer/InitServiceClient.m; sourceTree = "<group>"; };
+		83CB26821B203E1400138203 /* BaseProxyProtected.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseProxyProtected.h; sourceTree = "<group>"; };
+		83CB26831B203E6500138203 /* WCObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCObjectManager.h; sourceTree = "<group>"; };
+		83CB26841B203E6500138203 /* WCObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCObjectManager.m; sourceTree = "<group>"; };
+		83CB26861B20401A00138203 /* EncounterDataProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncounterDataProxy.h; sourceTree = "<group>"; };
+		83CB26871B20401A00138203 /* EncounterDataProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncounterDataProxy.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83CB25FE1B202F1F00138203 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CB26361B20322C00138203 /* libSyncTimesInternalModels.a in Frameworks */,
+				83CB261E1B202F4D00138203 /* MobileCoreServices.framework in Frameworks */,
+				83CB261C1B202F4500138203 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CB26091B202F1F00138203 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CB260D1B202F1F00138203 /* libSyncTimesServiceLayer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83CB25F81B202F1F00138203 = {
+			isa = PBXGroup;
+			children = (
+				83CB26311B2030EB00138203 /* Frameworks */,
+				83CB26031B202F1F00138203 /* SyncTimesServiceLayer */,
+				83CB26101B202F1F00138203 /* SyncTimesServiceLayerTests */,
+				83CB26021B202F1F00138203 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83CB26021B202F1F00138203 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83CB26011B202F1F00138203 /* libSyncTimesServiceLayer.a */,
+				83CB260C1B202F1F00138203 /* SyncTimesServiceLayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83CB26031B202F1F00138203 /* SyncTimesServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				83CB263F1B2033C800138203 /* InitServiceClient */,
+				83CB263E1B2033C000138203 /* ServiceClient */,
+				83CB26401B2033D200138203 /* EncounterData */,
+				83CB26411B2033EB00138203 /* WebClient */,
+				83CB263B1B20339200138203 /* PlistConfig */,
+				83CB26041B202F1F00138203 /* BaseProxy.h */,
+				83CB26061B202F1F00138203 /* BaseProxy.m */,
+				83CB26821B203E1400138203 /* BaseProxyProtected.h */,
+				83CB26421B20346D00138203 /* Endpoint.h */,
+				83CB26431B20346D00138203 /* Endpoint.m */,
+			);
+			path = SyncTimesServiceLayer;
+			sourceTree = "<group>";
+		};
+		83CB26101B202F1F00138203 /* SyncTimesServiceLayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				83CB26111B202F1F00138203 /* Supporting Files */,
+			);
+			path = SyncTimesServiceLayerTests;
+			sourceTree = "<group>";
+		};
+		83CB26111B202F1F00138203 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83CB26121B202F1F00138203 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83CB26311B2030EB00138203 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83CB26351B20322C00138203 /* libSyncTimesInternalModels.a */,
+				83CB261D1B202F4D00138203 /* MobileCoreServices.framework */,
+				83CB261B1B202F4500138203 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83CB263B1B20339200138203 /* PlistConfig */ = {
+			isa = PBXGroup;
+			children = (
+				83CB263C1B2033A800138203 /* Services_Config.plist */,
+			);
+			name = PlistConfig;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		83CB263E1B2033C000138203 /* ServiceClient */ = {
+			isa = PBXGroup;
+			children = (
+				83CB26451B2034D400138203 /* ServiceClient.h */,
+				83CB26461B2034D400138203 /* ServiceClient.m */,
+			);
+			name = ServiceClient;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		83CB263F1B2033C800138203 /* InitServiceClient */ = {
+			isa = PBXGroup;
+			children = (
+				83CB264B1B2035CA00138203 /* InitServiceClient.h */,
+				83CB264C1B2035CA00138203 /* InitServiceClient.m */,
+			);
+			name = InitServiceClient;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		83CB26401B2033D200138203 /* EncounterData */ = {
+			isa = PBXGroup;
+			children = (
+				83CB26861B20401A00138203 /* EncounterDataProxy.h */,
+				83CB26871B20401A00138203 /* EncounterDataProxy.m */,
+			);
+			name = EncounterData;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		83CB26411B2033EB00138203 /* WebClient */ = {
+			isa = PBXGroup;
+			children = (
+				83CB26831B203E6500138203 /* WCObjectManager.h */,
+				83CB26841B203E6500138203 /* WCObjectManager.m */,
+			);
+			name = WebClient;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83CB26001B202F1F00138203 /* SyncTimesServiceLayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CB26151B202F1F00138203 /* Build configuration list for PBXNativeTarget "SyncTimesServiceLayer" */;
+			buildPhases = (
+				83CB25FD1B202F1F00138203 /* Sources */,
+				83CB25FE1B202F1F00138203 /* Frameworks */,
+				83CB25FF1B202F1F00138203 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SyncTimesServiceLayer;
+			productName = SyncTimesServiceLayer;
+			productReference = 83CB26011B202F1F00138203 /* libSyncTimesServiceLayer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		83CB260B1B202F1F00138203 /* SyncTimesServiceLayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CB26181B202F1F00138203 /* Build configuration list for PBXNativeTarget "SyncTimesServiceLayerTests" */;
+			buildPhases = (
+				83CB26081B202F1F00138203 /* Sources */,
+				83CB26091B202F1F00138203 /* Frameworks */,
+				83CB260A1B202F1F00138203 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83CB260F1B202F1F00138203 /* PBXTargetDependency */,
+			);
+			name = SyncTimesServiceLayerTests;
+			productName = SyncTimesServiceLayerTests;
+			productReference = 83CB260C1B202F1F00138203 /* SyncTimesServiceLayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CB25F91B202F1F00138203 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "iLink-Systems";
+				TargetAttributes = {
+					83CB26001B202F1F00138203 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					83CB260B1B202F1F00138203 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 83CB25FC1B202F1F00138203 /* Build configuration list for PBXProject "SyncTimesServiceLayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 83CB25F81B202F1F00138203;
+			productRefGroup = 83CB26021B202F1F00138203 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83CB26001B202F1F00138203 /* SyncTimesServiceLayer */,
+				83CB260B1B202F1F00138203 /* SyncTimesServiceLayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83CB260A1B202F1F00138203 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CB263D1B2033A800138203 /* Services_Config.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83CB25FD1B202F1F00138203 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CB26851B203E6500138203 /* WCObjectManager.m in Sources */,
+				83CB26441B20346D00138203 /* Endpoint.m in Sources */,
+				83CB26471B2034D400138203 /* ServiceClient.m in Sources */,
+				83CB264D1B2035CA00138203 /* InitServiceClient.m in Sources */,
+				83CB26881B20401A00138203 /* EncounterDataProxy.m in Sources */,
+				83CB26071B202F1F00138203 /* BaseProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CB26081B202F1F00138203 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83CB260F1B202F1F00138203 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83CB26001B202F1F00138203 /* SyncTimesServiceLayer */;
+			targetProxy = 83CB260E1B202F1F00138203 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		83CB26131B202F1F00138203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CB26141B202F1F00138203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83CB26161B202F1F00138203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/Local,
+					"HD/iLink-Assets/SyncTimes/SyncTimesEncounterArea/SyncTimesInternalModels/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/..\"/** \"${PROJECT_DIR}/../SyncTimesInternalModels\"/**";
+			};
+			name = Debug;
+		};
+		83CB26171B202F1F00138203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/Local,
+					"HD/iLink-Assets/SyncTimes/SyncTimesEncounterArea/SyncTimesInternalModels/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/..\"/** \"${PROJECT_DIR}/../SyncTimesInternalModels\"/**";
+			};
+			name = Release;
+		};
+		83CB26191B202F1F00138203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SyncTimesServiceLayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83CB261A1B202F1F00138203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SyncTimesServiceLayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83CB25FC1B202F1F00138203 /* Build configuration list for PBXProject "SyncTimesServiceLayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CB26131B202F1F00138203 /* Debug */,
+				83CB26141B202F1F00138203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CB26151B202F1F00138203 /* Build configuration list for PBXNativeTarget "SyncTimesServiceLayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CB26161B202F1F00138203 /* Debug */,
+				83CB26171B202F1F00138203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CB26181B202F1F00138203 /* Build configuration list for PBXNativeTarget "SyncTimesServiceLayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CB26191B202F1F00138203 /* Debug */,
+				83CB261A1B202F1F00138203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CB25F91B202F1F00138203 /* Project object */;
+}

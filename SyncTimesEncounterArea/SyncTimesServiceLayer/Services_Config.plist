@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BASE_URL</key>
+	<string>http://{INSTANCE_URL}</string>
+	<key>SERVICES</key>
+	<dict>
+		<key>ENCOUNTER</key>
+		<dict>
+			<key>RESOURCE_COMPONENT</key>
+			<string>/v1/encounterarea/encounterareas/12345</string>
+			<key>OPERATIONS</key>
+			<dict>
+				<key>GET_ENCOUNTER_DATA</key>
+				<dict>
+					<key>PARAMETERS</key>
+					<dict/>
+					<key>HEADERS</key>
+					<dict>
+						<key>Content-Type</key>
+						<string>application/json</string>
+						<key>Api-Key</key>
+						<string>0106336D-DCE1-4EFE-8177-779845408ZZ9</string>
+						<key>Org-UID</key>
+						<string>UID1</string>
+					</dict>
+					<key>HTTP_METHOD</key>
+					<string>GET</string>
+					<key>ROUTE_FORMAT</key>
+					<string></string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
