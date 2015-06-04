@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		66EEF01BCB6E4D4AB77B6726 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DCC86BD585ABD541296324 /* libPods.a */; };
+		837E2C0D1B20BA9300D90C9E /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 837E2C0C1B20BA9300D90C9E /* libMBProgressHUD.a */; };
+		837E2C111B20BD3300D90C9E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 837E2C101B20BD3300D90C9E /* MBProgressHUD.m */; };
 		83C2BD171B20275000DA5EC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C2BD161B20275000DA5EC3 /* main.m */; };
 		83C2BD1A1B20275000DA5EC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C2BD191B20275000DA5EC3 /* AppDelegate.m */; };
 		83C2BD1D1B20275000DA5EC3 /* BaseVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C2BD1C1B20275000DA5EC3 /* BaseVController.m */; };
@@ -84,6 +86,9 @@
 		1CD9287E6B38A03FCAF4E868 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5AC63C6F504DAA9CE4953C80 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		60DCC86BD585ABD541296324 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		837E2C0C1B20BA9300D90C9E /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMBProgressHUD.a; sourceTree = "<group>"; };
+		837E2C0F1B20BD3300D90C9E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		837E2C101B20BD3300D90C9E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		83C2BD111B20275000DA5EC3 /* SyncTimesEncounterArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SyncTimesEncounterArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C2BD151B20275000DA5EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83C2BD161B20275000DA5EC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,6 +131,7 @@
 				83CB259D1B2028E900138203 /* libPods-TSMessages.a in Frameworks */,
 				83CB25991B2028C700138203 /* MobileCoreServices.framework in Frameworks */,
 				83CB25971B2028C100138203 /* SystemConfiguration.framework in Frameworks */,
+				837E2C0D1B20BA9300D90C9E /* libMBProgressHUD.a in Frameworks */,
 				83CB25951B2028B800138203 /* Security.framework in Frameworks */,
 				83CB25931B2028B300138203 /* QuartzCore.framework in Frameworks */,
 			);
@@ -158,6 +164,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		837E2C081B20B7B200D90C9E /* VControllers */ = {
+			isa = PBXGroup;
+			children = (
+				837E2C091B20B7C600D90C9E /* BaseVController */,
+			);
+			name = VControllers;
+			sourceTree = "<group>";
+		};
+		837E2C091B20B7C600D90C9E /* BaseVController */ = {
+			isa = PBXGroup;
+			children = (
+				83C2BD1B1B20275000DA5EC3 /* BaseVController.h */,
+				83C2BD1C1B20275000DA5EC3 /* BaseVController.m */,
+			);
+			name = BaseVController;
+			sourceTree = "<group>";
+		};
+		837E2C0A1B20BA0A00D90C9E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				837E2C0E1B20BD1900D90C9E /* ProgressBar */,
+				83C2BD211B20275000DA5EC3 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		837E2C0B1B20BA7C00D90C9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				837E2C0C1B20BA9300D90C9E /* libMBProgressHUD.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		837E2C0E1B20BD1900D90C9E /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				837E2C0F1B20BD3300D90C9E /* MBProgressHUD.h */,
+				837E2C101B20BD3300D90C9E /* MBProgressHUD.m */,
+			);
+			name = ProgressBar;
+			sourceTree = "<group>";
+		};
 		83C2BD081B20275000DA5EC3 = {
 			isa = PBXGroup;
 			children = (
@@ -185,11 +234,10 @@
 			children = (
 				83C2BD181B20275000DA5EC3 /* AppDelegate.h */,
 				83C2BD191B20275000DA5EC3 /* AppDelegate.m */,
-				83C2BD1B1B20275000DA5EC3 /* BaseVController.h */,
-				83C2BD1C1B20275000DA5EC3 /* BaseVController.m */,
 				83C2BD1E1B20275000DA5EC3 /* Main.storyboard */,
-				83C2BD211B20275000DA5EC3 /* Images.xcassets */,
 				83C2BD231B20275100DA5EC3 /* LaunchScreen.xib */,
+				837E2C081B20B7B200D90C9E /* VControllers */,
+				837E2C0A1B20BA0A00D90C9E /* Resources */,
 				83C2BD141B20275000DA5EC3 /* Supporting Files */,
 			);
 			path = SyncTimesEncounterArea;
@@ -198,6 +246,7 @@
 		83C2BD141B20275000DA5EC3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				837E2C0B1B20BA7C00D90C9E /* Frameworks */,
 				83C2BD151B20275000DA5EC3 /* Info.plist */,
 				83C2BD161B20275000DA5EC3 /* main.m */,
 			);
@@ -474,6 +523,7 @@
 				83C2BD1D1B20275000DA5EC3 /* BaseVController.m in Sources */,
 				83C2BD1A1B20275000DA5EC3 /* AppDelegate.m in Sources */,
 				83C2BD171B20275000DA5EC3 /* main.m in Sources */,
+				837E2C111B20BD3300D90C9E /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +655,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/SyncTimesEncounterArea",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/SyncTimesInternalModels\"/**";
@@ -621,6 +672,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/SyncTimesEncounterArea",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/SyncTimesInternalModels\"/** \"${PROJECT_DIR}/SyncTimesAccessLayer\"/**";

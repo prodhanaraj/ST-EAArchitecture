@@ -2,7 +2,7 @@
 //  EncounterProxy.h
 //  SyncTimesBusinessLayer
 //
-//  Created by Dexter on 28/05/15.
+//  Created by Dhanaraj on 28/05/15.
 //  Copyright (c) 2015 iLink-Systems. All rights reserved.
 //
 

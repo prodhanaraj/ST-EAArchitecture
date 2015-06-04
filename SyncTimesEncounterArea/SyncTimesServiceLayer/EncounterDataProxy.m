@@ -2,7 +2,7 @@
 //  EncounterProxy.m
 //  SyncTimesBusinessLayer
 //
-//  Created by Dexter on 28/05/15.
+//  Created by Dhanaraj on 28/05/15.
 //  Copyright (c) 2015 iLink-Systems. All rights reserved.
 //
 
@@ -85,7 +85,7 @@
     [EncounterDataMapping addPropertyMapping:occupantRelationEncounter];
     /*********************** OCCUPANT MAPPING ENDS HERE ***********************/
     
-    /********************************************* ENCOUNTER DATA MAPPING STARTS HERE *********************************************/
+    /********************************************* ENCOUNTER DATA MAPPING ENDS HERE *********************************************/
 
     
     RKResponseDescriptor * responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:EncounterDataMapping method:RKRequestMethodAny pathPattern:[NSString stringWithFormat:@"%@%@", encounterDataEndpoint.ResourceComponent, encounterDataEndpoint.RoutingFormat] keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];

@@ -2,7 +2,7 @@
 //  InitServiceClient.m
 //  SyncTimesServiceLayer
 //
-//  Created by Dexter on 04/06/15.
+//  Created by Dhanaraj on 04/06/15.
 //  Copyright (c) 2015 iLink-Systems. All rights reserved.
 //
 
