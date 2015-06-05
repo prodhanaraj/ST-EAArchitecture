@@ -12,7 +12,9 @@
 @protocol SyncTimesEncounterServiceInteractionsProtocol <NSObject>
 
 @optional
-- (void)didGetEncounterData:(id<EncounterDataProtocol>)encounterData;
+- (void)didGetEncounterData:(id<EncounterAreaDataProtocol>)encounterData;
+- (void)didGetEncounterAreaData:(id<EncounterAreaDataProtocol>)encounterAreaData;
 -(void)onSyncTimesServiceError:(NSError *)error StatusCode:(int)statusCode;
 -(void)onSyncTimesServiceWarning:(NSString *)warning;
+- (void)OnProgressUpdate:(float)progressPercentage;
 @end

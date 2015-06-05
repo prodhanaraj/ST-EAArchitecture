@@ -18,7 +18,7 @@
 		83CB26471B2034D400138203 /* ServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB26461B2034D400138203 /* ServiceClient.m */; };
 		83CB264D1B2035CA00138203 /* InitServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB264C1B2035CA00138203 /* InitServiceClient.m */; };
 		83CB26851B203E6500138203 /* WCObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB26841B203E6500138203 /* WCObjectManager.m */; };
-		83CB26881B20401A00138203 /* EncounterDataProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB26871B20401A00138203 /* EncounterDataProxy.m */; };
+		83CB26881B20401A00138203 /* EncounterAreaDataProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB26871B20401A00138203 /* EncounterAreaDataProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,8 @@
 		83CB26821B203E1400138203 /* BaseProxyProtected.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseProxyProtected.h; sourceTree = "<group>"; };
 		83CB26831B203E6500138203 /* WCObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCObjectManager.h; sourceTree = "<group>"; };
 		83CB26841B203E6500138203 /* WCObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCObjectManager.m; sourceTree = "<group>"; };
-		83CB26861B20401A00138203 /* EncounterDataProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncounterDataProxy.h; sourceTree = "<group>"; };
-		83CB26871B20401A00138203 /* EncounterDataProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncounterDataProxy.m; sourceTree = "<group>"; };
+		83CB26861B20401A00138203 /* EncounterAreaDataProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncounterAreaDataProxy.h; sourceTree = "<group>"; };
+		83CB26871B20401A00138203 /* EncounterAreaDataProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncounterAreaDataProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 			children = (
 				83CB263F1B2033C800138203 /* InitServiceClient */,
 				83CB263E1B2033C000138203 /* ServiceClient */,
-				83CB26401B2033D200138203 /* EncounterData */,
+				83CB26401B2033D200138203 /* EncounterAreaData */,
 				83CB26411B2033EB00138203 /* WebClient */,
 				83CB263B1B20339200138203 /* PlistConfig */,
 				83CB26041B202F1F00138203 /* BaseProxy.h */,
@@ -180,13 +180,13 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		83CB26401B2033D200138203 /* EncounterData */ = {
+		83CB26401B2033D200138203 /* EncounterAreaData */ = {
 			isa = PBXGroup;
 			children = (
-				83CB26861B20401A00138203 /* EncounterDataProxy.h */,
-				83CB26871B20401A00138203 /* EncounterDataProxy.m */,
+				83CB26861B20401A00138203 /* EncounterAreaDataProxy.h */,
+				83CB26871B20401A00138203 /* EncounterAreaDataProxy.m */,
 			);
-			name = EncounterData;
+			name = EncounterAreaData;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -293,7 +293,7 @@
 				83CB26441B20346D00138203 /* Endpoint.m in Sources */,
 				83CB26471B2034D400138203 /* ServiceClient.m in Sources */,
 				83CB264D1B2035CA00138203 /* InitServiceClient.m in Sources */,
-				83CB26881B20401A00138203 /* EncounterDataProxy.m in Sources */,
+				83CB26881B20401A00138203 /* EncounterAreaDataProxy.m in Sources */,
 				83CB26071B202F1F00138203 /* BaseProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

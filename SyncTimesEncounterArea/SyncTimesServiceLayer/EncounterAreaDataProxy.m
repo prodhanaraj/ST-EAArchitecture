@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 iLink-Systems. All rights reserved.
 //
 
-#import "EncounterDataProxy.h"
+#import "EncounterAreaDataProxy.h"
 #import "InitServiceClient.h"
 
-@implementation EncounterDataProxy
+@implementation EncounterAreaDataProxy
 
 - (instancetype)init{
     self = [super initWithClient:[InitServiceClient ENCOUNTER_DATA_SERVICE]];
@@ -27,7 +27,7 @@
     /********************************************* ENCOUNTER DATA MAPPING STARTS HERE *********************************************/
     
     /*********************** 1. ORGANIZATION DATA MAPPING STARTS HERE ***********************/
-    RKObjectMapping * EncounterDataMapping = [RKObjectMapping mappingForClass:[EncounterData class]];
+    RKObjectMapping * EncounterDataMapping = [RKObjectMapping mappingForClass:[EncounterAreaData class]];
     
     RKObjectMapping * OrganizationMapping = [RKObjectMapping mappingForClass:[Organization class]];
     [OrganizationMapping addAttributeMappingsFromDictionary:@{
@@ -90,20 +90,34 @@
     
     RKResponseDescriptor * responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:EncounterDataMapping method:RKRequestMethodAny pathPattern:[NSString stringWithFormat:@"%@%@", encounterDataEndpoint.ResourceComponent, encounterDataEndpoint.RoutingFormat] keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
     [self.ObjectManager addResponseDescriptor:responseDescriptor];
-    [self.ObjectManager.router.routeSet addRoute:[RKRoute routeWithClass:[EncounterDataRequest class] pathPattern:[NSString stringWithFormat:@"%@%@", encounterDataEndpoint.ResourceComponent, encounterDataEndpoint.RoutingFormat] method:RKRequestMethodGET]];
+    [self.ObjectManager.router.routeSet addRoute:[RKRoute routeWithClass:[EncounterAreaDataRequest class] pathPattern:[NSString stringWithFormat:@"%@%@", encounterDataEndpoint.ResourceComponent, encounterDataEndpoint.RoutingFormat] method:RKRequestMethodGET]];
 }
 
--(void)GetEncounterData:(id<EncounterDataRequestProtocol>)requestParams onSuccess:(void (^)(id<EncounterDataProtocol>))success onFailure:(void (^)(NSError *, int))failure{
+- (void)GetEncounterAreaData:(id<EncounterAreaDataRequestProtocol>)requestParams onSuccess:(void (^)(id<EncounterAreaDataProtocol>))success onFailure:(void (^)(NSError *, int))failure onProgressUpdate:(void (^)(float))progressPercentage {
+    
+    __block double progress = 0;
+    __block float step = (float)10;
+    if (progressPercentage) {
+        progressPercentage(progress += step);
+    }
     
     Endpoint * encounterDataEndpoint = [self getEndPointForOperation:@"GET_ENCOUNTER_DATA"];
     [self setHTTPHeaders:encounterDataEndpoint];
     
-    [self.ObjectManager getObject:(EncounterDataRequest *)requestParams path:nil parameters:nil success:^(RKObjectRequestOperation * operation, RKMappingResult * mappingResult){
+    step = 50;
+    if (progressPercentage) {
+        progressPercentage(progress += step);
+    }
+    
+    [self.ObjectManager getObject:(EncounterAreaDataRequest *)requestParams path:nil parameters:nil success:^(RKObjectRequestOperation * operation, RKMappingResult * mappingResult){
+        step = 100;
+        if (progressPercentage) {
+            progressPercentage(progress += step);
+        }
         success(mappingResult.firstObject);
     }failure:^(RKObjectRequestOperation * operation, NSError * error){
         failure(error, (int)operation.HTTPRequestOperation.response.statusCode);
     }];
-    
 }
 
 @end

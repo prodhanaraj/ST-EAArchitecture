@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 iLink-Systems. All rights reserved.
 //
 
-#import "EncounterDataRequest.h"
+#import "EncounterAreaDataRequest.h"
 
-@implementation EncounterDataRequest
+@implementation EncounterAreaDataRequest
 
 @synthesize URL;
 

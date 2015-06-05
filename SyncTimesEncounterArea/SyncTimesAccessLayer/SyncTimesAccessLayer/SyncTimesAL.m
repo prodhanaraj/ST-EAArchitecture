@@ -11,11 +11,11 @@
 #import "InitServiceClient.h"
 
 @interface SyncTimesAL()
-@property (nonatomic, strong) id <EncounterDataProxyProtocol> encounterDataService;
+@property (nonatomic, strong) id <EncounterAreaDataProxyProtocol> encounterAreaDataService;
 @end
 
 @implementation SyncTimesAL
-@synthesize encounterDataService = _encounterDataService;
+@synthesize encounterAreaDataService = _encounterAreaDataService;
 
 static NSString * instanceURL;
 
@@ -28,11 +28,11 @@ static NSString * instanceURL;
     return singleton;
 }
 
-- (id<EncounterDataProxyProtocol>)encounterDataService {
-    if (!_encounterDataService) {
-        _encounterDataService = [ServiceFactory CreateEncounterDataService:instanceURL];
+- (id<EncounterAreaDataProxyProtocol>)encounterAreaDataService {
+    if (!_encounterAreaDataService) {
+        _encounterAreaDataService = [ServiceFactory CreateEncounterDataService:instanceURL];
     }
-    return _encounterDataService;
+    return _encounterAreaDataService;
 }
 
 - (instancetype)init {
@@ -48,22 +48,29 @@ static NSString * instanceURL;
     return self;
 }
 
-- (void)GetEncounterData:(id<EncounterDataRequestProtocol>)requestParameters {
-    EncounterDataRequest *encounterDataRequest = requestParameters;
-    
-    if (!encounterDataRequest) {
-        //Do nothing here since we are not going to authenticate for hitting WEB API for now
-    }
-    
-    [self.encounterDataService GetEncounterData:requestParameters onSuccess:^(id <EncounterDataProtocol> encounterData){
+- (void)GetEncounterAreaData:(id<EncounterAreaDataRequestProtocol>)requestParamerters {
+    [self.encounterAreaDataService GetEncounterAreaData:requestParamerters onSuccess:^(id <EncounterAreaDataProtocol> encounterAreaData){
+        if ([self.delegate respondsToSelector:@selector(didGetEncounterAreaData:)]) {
+            [self.delegate didGetEncounterAreaData:encounterAreaData];
+        }
+        /*
         if ([self.delegate respondsToSelector:@selector(didGetEncounterData:)]) {
             [self.delegate didGetEncounterData:encounterData];
         }
+         */
     }onFailure:^(NSError * error, int statusCode){
         if ([self.delegate respondsToSelector:@selector(onSyncTimesServiceError:StatusCode:)]) {
             [self.delegate onSyncTimesServiceError:error StatusCode:statusCode];
         }
+    }onProgressUpdate:^(float progress){
+        if ([self.delegate respondsToSelector:@selector(OnProgressUpdate:)]) {
+            [self.delegate OnProgressUpdate:progress];
+        }
     }];
+}
+
+- (void)authenticateUser:(NSString *)username withPassword:(NSString *)password {
+    //Do nothing here for now, since there is no need of authenticate, for fetching Encounter Area Data from the Web Service
 }
 
 @end

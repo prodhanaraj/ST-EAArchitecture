@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EncounterData.h"
+#import "EncounterAreaData.h"
 #import "SyncTimesAL.h"
 #import "MBProgressHUD.h"
 
@@ -16,7 +16,7 @@
 #pragma mark - Encounter Data Configuration
 
 - (void)setInstance:(NSString * )instance;
-- (void)getEncounterData:(EncounterDataRequest * )request;
+- (void)getEncounterAreaData:(EncounterAreaDataRequest * )request;
 
 #pragma mark - Progress Bar
 

@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		83CB25C31B202CC700138203 /* libSyncTimesInternalModels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CB25B71B202CC700138203 /* libSyncTimesInternalModels.a */; };
-		83CB25DD1B202DDD00138203 /* EncounterDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB25DC1B202DDD00138203 /* EncounterDataRequest.m */; };
+		83CB25DD1B202DDD00138203 /* EncounterAreaDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB25DC1B202DDD00138203 /* EncounterAreaDataRequest.m */; };
 		83CB25E01B202DF300138203 /* Occupant.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB25DF1B202DF300138203 /* Occupant.m */; };
 		83CB25E31B202DFB00138203 /* CurrentAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB25E21B202DFB00138203 /* CurrentAction.m */; };
 		83CB25E61B202E0C00138203 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB25E51B202E0C00138203 /* Action.m */; };
 		83CB25E91B202E1800138203 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB25E81B202E1800138203 /* Organization.m */; };
-		83CB25EC1B202E2000138203 /* EncounterData.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB25EB1B202E2000138203 /* EncounterData.m */; };
+		83CB25EC1B202E2000138203 /* EncounterAreaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB25EB1B202E2000138203 /* EncounterAreaData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,8 @@
 		83CB25B71B202CC700138203 /* libSyncTimesInternalModels.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSyncTimesInternalModels.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CB25C21B202CC700138203 /* SyncTimesInternalModelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyncTimesInternalModelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CB25C81B202CC700138203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83CB25DB1B202DDD00138203 /* EncounterDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncounterDataRequest.h; sourceTree = "<group>"; };
-		83CB25DC1B202DDD00138203 /* EncounterDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncounterDataRequest.m; sourceTree = "<group>"; };
+		83CB25DB1B202DDD00138203 /* EncounterAreaDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncounterAreaDataRequest.h; sourceTree = "<group>"; };
+		83CB25DC1B202DDD00138203 /* EncounterAreaDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncounterAreaDataRequest.m; sourceTree = "<group>"; };
 		83CB25DE1B202DF300138203 /* Occupant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Occupant.h; sourceTree = "<group>"; };
 		83CB25DF1B202DF300138203 /* Occupant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Occupant.m; sourceTree = "<group>"; };
 		83CB25E11B202DFB00138203 /* CurrentAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentAction.h; sourceTree = "<group>"; };
@@ -52,12 +52,12 @@
 		83CB25E51B202E0C00138203 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
 		83CB25E71B202E1800138203 /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organization.h; sourceTree = "<group>"; };
 		83CB25E81B202E1800138203 /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organization.m; sourceTree = "<group>"; };
-		83CB25EA1B202E2000138203 /* EncounterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncounterData.h; sourceTree = "<group>"; };
-		83CB25EB1B202E2000138203 /* EncounterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncounterData.m; sourceTree = "<group>"; };
+		83CB25EA1B202E2000138203 /* EncounterAreaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncounterAreaData.h; sourceTree = "<group>"; };
+		83CB25EB1B202E2000138203 /* EncounterAreaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncounterAreaData.m; sourceTree = "<group>"; };
 		83CB25ED1B202E3300138203 /* Entities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entities.h; sourceTree = "<group>"; };
 		83CB25EE1B202E3300138203 /* SyncTimesEncounterServiceInteractionsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyncTimesEncounterServiceInteractionsProtocol.h; sourceTree = "<group>"; };
 		83CB26801B203C5B00138203 /* BaseProxyProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseProxyProtocol.h; sourceTree = "<group>"; };
-		83CB26811B203C5B00138203 /* EncounterDataProxyProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncounterDataProxyProtocol.h; sourceTree = "<group>"; };
+		83CB26811B203C5B00138203 /* EncounterAreaDataProxyProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncounterAreaDataProxyProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				83CB26801B203C5B00138203 /* BaseProxyProtocol.h */,
-				83CB26811B203C5B00138203 /* EncounterDataProxyProtocol.h */,
+				83CB26811B203C5B00138203 /* EncounterAreaDataProxyProtocol.h */,
 			);
 			name = "Service Proxies";
 			sourceTree = "<group>";
@@ -157,18 +157,18 @@
 				83CB25D81B202D8D00138203 /* CurrentAction */,
 				83CB25D71B202D8900138203 /* Action */,
 				83CB25D61B202D8300138203 /* Organization */,
-				83CB25D51B202D7B00138203 /* EncounterData */,
+				83CB25D51B202D7B00138203 /* EncounterAreaData */,
 			);
 			name = ResponseTypes;
 			sourceTree = "<group>";
 		};
-		83CB25D51B202D7B00138203 /* EncounterData */ = {
+		83CB25D51B202D7B00138203 /* EncounterAreaData */ = {
 			isa = PBXGroup;
 			children = (
-				83CB25EA1B202E2000138203 /* EncounterData.h */,
-				83CB25EB1B202E2000138203 /* EncounterData.m */,
+				83CB25EA1B202E2000138203 /* EncounterAreaData.h */,
+				83CB25EB1B202E2000138203 /* EncounterAreaData.m */,
 			);
-			name = EncounterData;
+			name = EncounterAreaData;
 			sourceTree = "<group>";
 		};
 		83CB25D61B202D8300138203 /* Organization */ = {
@@ -210,8 +210,8 @@
 		83CB25DA1B202D9A00138203 /* RequestParams */ = {
 			isa = PBXGroup;
 			children = (
-				83CB25DB1B202DDD00138203 /* EncounterDataRequest.h */,
-				83CB25DC1B202DDD00138203 /* EncounterDataRequest.m */,
+				83CB25DB1B202DDD00138203 /* EncounterAreaDataRequest.h */,
+				83CB25DC1B202DDD00138203 /* EncounterAreaDataRequest.m */,
 			);
 			name = RequestParams;
 			sourceTree = "<group>";
@@ -305,11 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				83CB25E91B202E1800138203 /* Organization.m in Sources */,
-				83CB25DD1B202DDD00138203 /* EncounterDataRequest.m in Sources */,
+				83CB25DD1B202DDD00138203 /* EncounterAreaDataRequest.m in Sources */,
 				83CB25E61B202E0C00138203 /* Action.m in Sources */,
 				83CB25E01B202DF300138203 /* Occupant.m in Sources */,
 				83CB25E31B202DFB00138203 /* CurrentAction.m in Sources */,
-				83CB25EC1B202E2000138203 /* EncounterData.m in Sources */,
+				83CB25EC1B202E2000138203 /* EncounterAreaData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 iLink-Systems. All rights reserved.
 //
 
-#import "EncounterData.h"
+#import "EncounterAreaData.h"
 
-@implementation EncounterData
+@implementation EncounterAreaData
 @synthesize OrganizationData, CurrentActions, OccupantList, ActionList;
 
 

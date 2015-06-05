@@ -11,9 +11,9 @@
 @implementation ServiceFactory
 
 //Returns instance of the EncounterData Service
-+(id <EncounterDataProxyProtocol>)CreateEncounterDataService:(NSString *)instanceUrl {
-    [EncounterDataProxy setInstanceURL:instanceUrl];
-    return [[EncounterDataProxy alloc] init];
++(id <EncounterAreaDataProxyProtocol>)CreateEncounterDataService:(NSString *)instanceUrl {
+    [EncounterAreaDataProxy setInstanceURL:instanceUrl];
+    return [[EncounterAreaDataProxy alloc] init];
 }
 
 + (void)setAuthorizationCredentials:(NSString *)username Password:(NSString *)password {

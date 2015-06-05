@@ -7,17 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EncounterDataRequest.h"
+#import "EncounterAreaDataRequest.h"
 
 #import "Organization.h"
 
-@protocol EncounterDataProtocol
+@protocol EncounterAreaDataProtocol
 
 @optional
-@property (nonatomic, strong) id<EncounterDataRequestProtocol> RequestParameters;
+@property (nonatomic, strong) id<EncounterAreaDataRequestProtocol> RequestParameters;
 
 @required
-//@property (nonatomic, strong) NSArray * OrganizationData;
 @property (nonatomic, strong) Organization *OrganizationData;
 @property (nonatomic, strong) NSArray * ActionList;
 @property (nonatomic, strong) NSArray * CurrentActions;
@@ -25,6 +24,6 @@
 
 @end
 
-@interface EncounterData : NSObject<EncounterDataProtocol>
+@interface EncounterAreaData : NSObject<EncounterAreaDataProtocol>
 
 @end

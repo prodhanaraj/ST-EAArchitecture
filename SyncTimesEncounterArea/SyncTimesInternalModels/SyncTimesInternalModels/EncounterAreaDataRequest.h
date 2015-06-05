@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol EncounterDataRequestProtocol
+@protocol EncounterAreaDataRequestProtocol
 
 @required
 @property (nonatomic, strong) NSString * URL;
 
 @end
 
-@interface EncounterDataRequest : NSObject<EncounterDataRequestProtocol>
+@interface EncounterAreaDataRequest : NSObject<EncounterAreaDataRequestProtocol>
 
 @end

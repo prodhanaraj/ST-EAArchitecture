@@ -8,13 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseProxyProtected.h"
-#import "EncounterDataProxyProtocol.h"
-#import "EncounterDataRequest.h"
+#import "EncounterAreaDataProxyProtocol.h"
 #import "Organization.h"
 #import "Action.h"
 #import "CurrentAction.h"
 #import "Occupant.h"
 
-@interface EncounterDataProxy : BaseProxy<EncounterDataProxyProtocol>
+@interface EncounterAreaDataProxy : BaseProxy<EncounterAreaDataProxyProtocol>
 
 @end

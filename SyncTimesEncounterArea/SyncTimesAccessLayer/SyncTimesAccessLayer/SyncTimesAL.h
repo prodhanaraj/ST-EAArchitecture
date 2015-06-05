@@ -22,6 +22,6 @@
 
 - (void)authenticateUser:(NSString * )username withPassword:(NSString * )password;
 
-- (void)GetEncounterData:(id <EncounterDataRequestProtocol>)requestParameters;
+- (void)GetEncounterAreaData:(id <EncounterAreaDataRequestProtocol>)requestParamerters;
 
 @end

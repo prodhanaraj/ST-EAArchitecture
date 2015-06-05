@@ -41,20 +41,19 @@
     
     [self runBlockOnMainThread:^{
         [self setInstance:@"synctimescesium.azurewebsites.net"];
-        EncounterDataRequest *requestForEncounterData = [EncounterDataRequest new];
+        EncounterAreaDataRequest *requestForEncounterData = [EncounterAreaDataRequest new];
         requestForEncounterData.URL = @"";
-        [self getEncounterData:requestForEncounterData];
+        [self getEncounterAreaData:requestForEncounterData];
     }];
 }
 
-
-- (void)getEncounterData:(EncounterDataRequest *)request {
+- (void)getEncounterAreaData:(EncounterAreaDataRequest *)request {
     request.URL = nil;
-    [self.accessLayer GetEncounterData:request];
+    [self.accessLayer GetEncounterAreaData:request];
 }
 
-- (void)didGetEncounterData:(id<EncounterDataProtocol>)encounterData {
-    NSLog(@"Encounter Data %@", encounterData);
+- (void)didGetEncounterAreaData:(id<EncounterAreaDataProtocol>)encounterAreaData {
+    NSLog(@"Encounter Area Data : %@", encounterAreaData);
     [self hideProgressBarOnMainThread];
 }
 
@@ -84,6 +83,12 @@
         self.progressBar = progressBar;
     }];
     
+}
+
+- (void)OnProgressUpdate:(float)progressPercentage {
+    if (self.progressBar) {
+        [self.progressBar setProgress:(progressPercentage / 100)];
+    }
 }
 
 - (void)hideProgressBarOnMainThread {

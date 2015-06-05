@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EncounterDataProxy.h"
+#import "EncounterAreaDataProxy.h"
 
-@protocol EncounterDataProxyProtocol;
+@protocol EncounterAreaDataProxyProtocol;
 
 @interface ServiceFactory : NSObject
 
 + (void)setAuthorizationCredentials:(NSString *)username Password:(NSString *)password;
 
-+ (id <EncounterDataProxyProtocol>)CreateEncounterDataService:(NSString * )instanceUrl;
++ (id <EncounterAreaDataProxyProtocol>)CreateEncounterDataService:(NSString * )instanceUrl;
 
 @end

@@ -7,6 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EncounterData.h"
-#import "EncounterDataRequest.h"
+#import "EncounterAreaData.h"
+#import "EncounterAreaDataRequest.h"
 
