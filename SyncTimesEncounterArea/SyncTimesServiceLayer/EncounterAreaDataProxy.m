@@ -52,7 +52,8 @@
                                                         @"ActionImagePath" : @"ActionImageURL",
                                                         @"ActionOrder" : @"ActionOrder",
                                                         @"IsActive" : @"IsActive",
-                                                        @"IsActionAdded" : @"IsActionNeeded"
+                                                        @"Priority" : @"Priority",
+                                                        @"IsActionAdded" : @"IsActionAdded"
                                                         }];
     // Add relationship to encounter data
     RKRelationshipMapping * actionRelationEncounter = [RKRelationshipMapping relationshipMappingFromKeyPath:@"Data.ActionList" toKeyPath:@"ActionList" withMapping:ActionMapping];
@@ -65,7 +66,7 @@
                                                                @"Name" : @"Name",
                                                                @"ActionImagePath" : @"ActionImageURL",
                                                                @"IsActiveAction" : @"IsActiveAction",
-                                                               @"ISActionComplete" : @"ISActionComplete",
+                                                               @"IsActionComplete" : @"IsActionCompleted",
                                                                @"Priority" : @"Priority"
                                                                }];
     // Add relationship to encounter data

@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DDASLLogger.h"
+#import "DDTTYLogger.h"
+#import "DDFileLogger.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

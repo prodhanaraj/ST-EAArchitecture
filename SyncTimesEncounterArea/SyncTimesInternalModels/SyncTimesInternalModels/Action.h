@@ -15,8 +15,7 @@
 @property (nonatomic, strong) NSString * ActionImageURL;
 @property (nonatomic, strong) NSString * ActionOrder;
 @property (nonatomic, strong) NSString * IsActive;
-@property (nonatomic, strong) NSString * IsActionNeeded;
-@property (nonatomic, strong) NSString * IsHighPriorityAction;
-@property (nonatomic, strong) NSString * IsActionCompleted;
+@property (nonatomic, strong) NSString * IsActionAdded;
+@property (nonatomic, strong) NSString * Priority;
 
 @end

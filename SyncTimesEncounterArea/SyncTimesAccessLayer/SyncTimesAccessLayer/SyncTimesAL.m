@@ -53,11 +53,6 @@ static NSString * instanceURL;
         if ([self.delegate respondsToSelector:@selector(didGetEncounterAreaData:)]) {
             [self.delegate didGetEncounterAreaData:encounterAreaData];
         }
-        /*
-        if ([self.delegate respondsToSelector:@selector(didGetEncounterData:)]) {
-            [self.delegate didGetEncounterData:encounterData];
-        }
-         */
     }onFailure:^(NSError * error, int statusCode){
         if ([self.delegate respondsToSelector:@selector(onSyncTimesServiceError:StatusCode:)]) {
             [self.delegate onSyncTimesServiceError:error StatusCode:statusCode];
