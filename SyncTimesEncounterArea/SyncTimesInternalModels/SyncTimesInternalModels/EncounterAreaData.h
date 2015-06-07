@@ -22,6 +22,8 @@
 @property (nonatomic, strong) NSArray * CurrentActions;
 @property (nonatomic, strong) NSArray * OccupantList;
 
+@property (nonatomic, strong) NSMutableDictionary * actionImages;
+
 @end
 
 @interface EncounterAreaData : NSObject<EncounterAreaDataProtocol>

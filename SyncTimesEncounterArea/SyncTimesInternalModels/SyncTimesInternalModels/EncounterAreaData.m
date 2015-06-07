@@ -9,7 +9,7 @@
 #import "EncounterAreaData.h"
 
 @implementation EncounterAreaData
-@synthesize OrganizationData, CurrentActions, OccupantList, ActionList;
+@synthesize OrganizationData, CurrentActions, OccupantList, ActionList, actionImages;
 
 
 @end

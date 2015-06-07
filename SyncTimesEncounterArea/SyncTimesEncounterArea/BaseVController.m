@@ -10,6 +10,8 @@
 
 @interface BaseVController ()
 @property (nonatomic, strong) SyncTimesAL *accessLayer;
+@property (weak, nonatomic) IBOutlet UIImageView *testImgView;
+
 @end
 
 @implementation BaseVController

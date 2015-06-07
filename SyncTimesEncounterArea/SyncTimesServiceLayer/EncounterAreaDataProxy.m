@@ -24,6 +24,7 @@
 - (void)initEncounterDataOperation {
     Endpoint * encounterDataEndpoint = [self getEndPointForOperation:@"GET_ENCOUNTER_DATA"];
     
+    
     /********************************************* ENCOUNTER DATA MAPPING STARTS HERE *********************************************/
     
     /*********************** 1. ORGANIZATION DATA MAPPING STARTS HERE ***********************/
@@ -96,29 +97,61 @@
 
 - (void)GetEncounterAreaData:(id<EncounterAreaDataRequestProtocol>)requestParams onSuccess:(void (^)(id<EncounterAreaDataProtocol>))success onFailure:(void (^)(NSError *, int))failure onProgressUpdate:(void (^)(float))progressPercentage {
     
-    __block double progress = 0;
-    __block float step = (float)10;
-    if (progressPercentage) {
-        progressPercentage(progress += step);
-    }
+    __block double progress = 10;
+    __block double step = (float)0;
+    __block NSMutableDictionary * actionImages;
+    __block EncounterAreaData * encounterAreaComponents;
     
     Endpoint * encounterDataEndpoint = [self getEndPointForOperation:@"GET_ENCOUNTER_DATA"];
     [self setHTTPHeaders:encounterDataEndpoint];
     
-    step = 50;
     if (progressPercentage) {
         progressPercentage(progress += step);
     }
     
+    dispatch_group_t taskGroup = dispatch_group_create();
+    dispatch_group_enter(taskGroup);
+    
     [self.ObjectManager getObject:(EncounterAreaDataRequest *)requestParams path:nil parameters:nil success:^(RKObjectRequestOperation * operation, RKMappingResult * mappingResult){
-        step = 100;
-        if (progressPercentage) {
-            progressPercentage(progress += step);
+        encounterAreaComponents = mappingResult.firstObject;
+        actionImages = [[NSMutableDictionary alloc] initWithCapacity:[encounterAreaComponents.ActionList count]];
+        for (Action * action in [encounterAreaComponents ActionList]) {
+            step = (float)100 / [encounterAreaComponents.ActionList count];
+            dispatch_group_enter(taskGroup);
+            [self.ObjectManager.HTTPClient getPath:[action ActionImageURL] parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject){
+                [actionImages setObject:responseObject forKey:[action ActionImageURL]];
+                if (progressPercentage) {
+                    progressPercentage(progress += step);
+                }
+                dispatch_group_leave(taskGroup);
+            }failure:^(AFHTTPRequestOperation * operation, NSError * error){
+                [actionImages setObject:@"" forKey:[action ActionImageURL]];
+                if (progressPercentage) {
+                    progressPercentage(progress += step);
+                }
+                dispatch_group_leave(taskGroup);
+            }];
         }
-        success(mappingResult.firstObject);
+        dispatch_group_leave(taskGroup);
     }failure:^(RKObjectRequestOperation * operation, NSError * error){
+        dispatch_group_leave(taskGroup);
         failure(error, (int)operation.HTTPRequestOperation.response.statusCode);
     }];
+    
+    dispatch_queue_t waitingQueue = dispatch_queue_create("com.synctimes.waitingQueue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(waitingQueue, ^{
+        //waiting for threads
+        dispatch_group_wait(taskGroup, DISPATCH_TIME_FOREVER);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            EncounterAreaData * encounterAreaData = [EncounterAreaData new];
+            encounterAreaData.OrganizationData = [encounterAreaComponents OrganizationData];
+            encounterAreaData.ActionList = [encounterAreaComponents ActionList];
+            encounterAreaData.CurrentActions = [encounterAreaComponents CurrentActions];
+            encounterAreaData.OccupantList = [encounterAreaComponents OccupantList];
+            encounterAreaData.actionImages = actionImages;
+            success(encounterAreaData);
+        });
+    });
 }
 
 @end
